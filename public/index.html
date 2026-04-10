@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EventApp is a modern event management platform with booking, admin controls, and AI insights.">
+    <title>Event Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">EventApp</a>
+            <ul id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="chatbot.html">AI Assistant</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-grid">
+            <div>
+                <span class="status-chip">Event management, simplified</span>
+                <h1>Plan better events and grow attendance with confidence.</h1>
+                <p>Discover local events, manage bookings, and get intelligent recommendations from the AI assistant — all in one experience.</p>
+                <div class="hero-actions">
+                    <a href="events.html" class="btn">Browse Events</a>
+                    <a href="chatbot.html" class="btn secondary-btn">Talk to AI</a>
+                </div>
+            </div>
+            <div class="hero-card">
+                <h3>Built for organizers and attendees</h3>
+                <p>EventApp combines modern event discovery with a responsive dashboard, secure booking flow, and deep audit insights.</p>
+                <ul class="feature-list">
+                    <li>Fast event browsing</li>
+                    <li>Admin event controls</li>
+                    <li>AI-powered analytics</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="container feature-section">
+        <h2>Why EventApp works</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <span>📅</span>
+                <h3>Organize schedules</h3>
+                <p>Easily manage upcoming and past events with a clean event grid and booking workflow.</p>
+            </div>
+            <div class="feature-card">
+                <span>🧠</span>
+                <h3>Smart insights</h3>
+                <p>Use the built-in AI assistant for audits, recommendations, and real-time event intelligence.</p>
+            </div>
+            <div class="feature-card">
+                <span>🔒</span>
+                <h3>Secure access</h3>
+                <p>Role-based login and protected routes ensure organizers and users see the right features.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container audit-preview">
+        <div class="audit-preview-card">
+            <p class="eyebrow secondary">Deep audit preview</p>
+            <h2>See your event health at a glance</h2>
+            <p>EventApp analyzes your bookings, attendees, and contact activity to surface quick wins and performance indicators.</p>
+            <div class="audit-grid preview-grid">
+                <div class="audit-item"><h4>Audit score</h4><p>87 / 100</p></div>
+                <div class="audit-item"><h4>Retention</h4><p>74%</p></div>
+                <div class="audit-item"><h4>Upcoming events</h4><p>5</p></div>
+                <div class="audit-item"><h4>Top recommendation</h4><p>Increase event reminders for higher attendance.</p></div>
+            </div>
+            <a href="chatbot.html" class="btn">Run full audit now</a>
+        </div>
+    </section>
+
+    <section class="container contact-section">
+        <div class="contact-grid">
+            <div class="contact-copy">
+                <h2>Reach out for support</h2>
+                <p>Questions about your event flow or need help with the dashboard? Send us a message and we’ll respond quickly.</p>
+                <p class="form-note">If you're already logged in, the AI assistant can help you audit events and bookings in seconds.</p>
+            </div>
+            <div class="form-container">
+                <h2>Contact Us</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" id="contact-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="contact-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea id="contact-message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                    <p id="contact-status" class="error-text"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="page-footer">
+        <div class="container footer-wrap">
+            <p>&copy; 2026 EventApp. Built for event teams that want smarter bookings and deeper audits.</p>
+            <p class="footer-note">Designed to improve event performance with AI-powered insights.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

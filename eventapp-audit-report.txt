@@ -1,0 +1,75 @@
+EventApp Deep Audit Report
+==========================
+
+1. Introduction
+---------------
+EventApp is a full-stack event management application with event browsing, booking, administration, contact messaging, and an AI-powered assistant.
+The project uses Node.js, Express, MongoDB, and plain HTML/CSS/JavaScript for the frontend. A local Ollama model is integrated for chatbot and audit functionality.
+
+2. System Overview
+------------------
+- Backend: Node.js + Express
+- Database: MongoDB (Mongoose)
+- Frontend: HTML/CSS/JavaScript
+- Authentication: JWT
+- AI: Ollama local model using llama2:latest
+- Static hosting: Express serves the public directory
+
+3. Current Feature Set
+----------------------
+- User registration and login
+- Secure JWT auth with role-based admin controls
+- Event listing and booking flow
+- Admin event management (add/edit/delete)
+- Contact form and admin contact review
+- AI chatbot for event insights and audit questions
+- Audit endpoint providing event and booking statistics
+
+4. UI and Visual Audit
+----------------------
+- Navigation is sticky and modern across pages
+- Homepage includes hero, feature cards, audit preview, and contact section
+- Events page displays event cards with hover effect
+- Chatbot page has a split assistant and audit panel layout
+- Forms and cards use glassmorphism and consistent spacing
+- Footer messaging is now standardized across pages
+
+5. AI and Chatbot Audit
+-----------------------
+- Ollama model endpoint was corrected to use /v1/chat/completions
+- Chat history payload is limited to the last 6 turns
+- Response generation now uses smaller max_tokens and lower temperature for faster replies
+- Backend prompt includes key system data and recent events
+- The frontend typing animation is retained while backend responds efficiently
+
+6. Performance and Stability
+----------------------------
+- Removed legacy Gemini integration and switched fully to local Ollama
+- Backend route syntax validated for no errors
+- Frontend script syntax verified with Node
+- UI styling improvements are complete and consistent
+
+7. Recommendations
+------------------
+- Add live homepage audit statistics rather than static sample preview values
+- Continue tuning the Ollama prompt and model settings for even faster responses
+- Add fallback UI states for Ollama downtime or request errors
+- Improve mobile layout for the chatbot page and event pages
+- Consider adding real-time event analytics in the admin dashboard
+
+8. Key Files
+------------
+- server/server.js
+- routes/chatbot.js
+- public/chatbot.html
+- public/chatbot.js
+- public/style.css
+- public/script.js
+- config/db.js
+- models/Event.js, models/User.js, models/Booking.js, models/Contact.js
+
+9. Conclusion
+-------------
+EventApp is well-structured and visually upgraded with a modern audit-driven design.
+The current implementation is stable, and the local Ollama integration is functional.
+The app is ready for final refinement with live audit data and additional resilience improvements.

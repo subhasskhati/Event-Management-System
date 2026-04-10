@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create an EventApp account to book events, manage listings, and access AI insights.">
+    <title>Register - EventApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">EventApp</a>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="register.html" class="active">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Register</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="reg-name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="reg-email" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="reg-password" required>
+                </div>
+                <div class="form-group">
+                    <label>Role</label>
+                    <select id="reg-role">
+                        <option value="user">User</option>
+                        <option value="admin">Admin / Organizer</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+            <p id="reg-error" class="error-text"></p>
+        </div>
+    </div>
+
+    <footer class="page-footer">
+        <div class="container footer-wrap">
+            <p>&copy; 2026 EventApp. Secure registration for event participation.</p>
+            <p class="footer-note">Create an account to access bookings, events, and AI-driven audit tools.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse events, manage bookings, and access admin controls with EventApp.">
+    <title>Events - EventApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">EventApp</a>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="page-header">
+            <h2>Available Events</h2>
+            <p>Browse upcoming gatherings, workshops and meetups. Admins can manage event details directly from this panel.</p>
+        </section>
+
+        <div id="admin-controls" class="page-actions hidden">
+            <button class="btn secondary-btn" onclick="showAddEventForm()">Add New Event</button>
+        </div>
+
+        <section id="admin-dashboard" class="audit-card admin-dashboard hidden">
+            <h3>Admin Dashboard</h3>
+            <p>Review user accounts and incoming contact messages in one place.</p>
+            <div class="admin-section-grid">
+                <div class="admin-panel-card">
+                    <h4>User Accounts</h4>
+                    <div id="admin-users" class="admin-table-wrapper"></div>
+                </div>
+                <div class="admin-panel-card">
+                    <h4>Contact Messages</h4>
+                    <div id="admin-contacts" class="admin-messages"></div>
+                </div>
+            </div>
+        </section>
+
+        <div id="add-event-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close" onclick="closeAddEventForm()">&times;</span>
+                <h2 id="modal-title">Add New Event</h2>
+                <form id="event-form">
+                    <input type="hidden" id="event-id">
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" id="event-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea id="event-desc" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" id="event-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input type="text" id="event-loc" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Organizer</label>
+                        <input type="text" id="event-org" required>
+                    </div>
+                    <button type="submit" class="btn">Save Event</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="events-list" class="event-grid">
+            <!-- Events will be loaded here -->
+        </div>
+            </div>
+    </div>
+
+    <footer class="page-footer">
+        <div class="container footer-wrap">
+            <p>&copy; 2026 EventApp. Built for organizers and attendees.</p>
+            <p class="footer-note">Trusted for modern event discovery, booking, and administrative oversight.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

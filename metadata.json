@@ -1,0 +1,5 @@
+{
+  "name": "Event Management System",
+  "description": "A simple event management application built with plain HTML, CSS, and JS for the frontend and Node.js for the backend.",
+  "requestFramePermissions": []
+}
